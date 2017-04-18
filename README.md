@@ -35,30 +35,67 @@ npm test
 
 
 #### 目录结构
+```
+- _client_src
+  - actions
+    common_dialog.js  // 对话框相关 actions
+    common_message.js  // 消息相关 actions
+    common.js  // 通用 actions
+  
+  - components  // 无状态组件
+  
+  - containers  // 有状态页面（组件）
+  
+  - middlewares
+    request  // 请求中间件
+  
+  - reducers
+    dialog.js  // 对话框相关 reducer
+    message.js  // 消息相关 reducer
+    index.js  // 入口文件，包括通用 reducer
+  
+  - store
+    configureStore.js  // store 初始化
+    schemas.js  // 定义 schemas
+  
+  - utils  // 辅助文件
+  
+  index.jsx  // 入口文件
+  routes.jsx  // 路由配置文件
+  base.less  // 基础样式文件
+  common.less  // 通用样式文件，如颜色定义
+  
 - common
-  - error_helper: 自定义错误类型
-  - message_helper: 自定义返回值，可在请求中进行类似调用：
-  ```
-  return messageHelper.success(this);
-  ```
-  - tools: 自定义工具
-
-- middlewares
-  - easy_logger.js: 润色`koa-logs-ful`模块，让打印可以传入对象，在请求中进行类似调用：
-  ```
-  this.koaLogger.log(content);
-  ```
-
-- public
-  - css js 等静态文件
-
-- routes: 路由、controller
-
-- services: 将对 model 的操作放于此
-
-- test: 测试用例，使用 Mocha + Chai
-
-- views: 页面文件，使用 jade
+  constants.js  // 常量定义
+  error_helper.js  // error 类型定义
+  message_helper.js  // 返回 message 辅助类
+  request_helper.js  // 请求辅助类
+  tools.js  // 常用工具
+  
+- config  // 配置文件
+  
+- middlewares  // koa 中间件
+  
+- public  // 静态文件夹
+  
+- routes  // koa 路由
+  
+- test
+  
+- views
+  
+.eslint  // eslint 代码校验规则文件
+  
+.gitignore  // gitignore
+  
+app.js  // koa 主线程文件
+  
+package.json  // package.json
+  
+README.md  // README
+  
+webpack.config.js  // webpack 配置文件
+```
 
 
 
