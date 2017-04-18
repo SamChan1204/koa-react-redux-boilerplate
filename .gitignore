@@ -1,0 +1,11 @@
+*.log
+.idea
+coverage
+.sonar
+node_modules/
+logs/
+public/js
+public/css
+public/lib
+sonar-project.properties
+config/
